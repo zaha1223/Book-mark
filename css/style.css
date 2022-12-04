@@ -1,0 +1,401 @@
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/rubik-v21-latin-regular.woff2") format("woff2"),
+    url("../fonts/rubik-v21-latin-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/rubik-v21-latin-500.woff2") format("woff2"),
+    url("../fonts/rubik-v21-latin-500.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/noto-sans-v27-latin-500.woff2") format("woff2"),
+    url("../fonts/noto-sans-v27-latin-500.woff") format("woff");
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background: #e5e5e5;
+}
+.container {
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 11px 30px 0 30px;
+}
+.search-form__inpt {
+  border-style: none;
+  height: auto;
+  padding: 15px 540px 15px 16px;
+  background: #f8fafd;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+}
+.search-form__inpt::placeholder {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  color: rgba(0, 0, 0, 0.24);
+}
+.search-form__inpt:active {
+  border-color: #fff;
+}
+.logout-btn {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  border: none;
+  border-style: none;
+  color: #ffffff;
+  background: #0d75ff;
+  border-radius: 4px;
+  padding: 10px 23px 11px 23px;
+  color: #fff;
+}
+.results {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 11px 30px 11px 306px;
+}
+.result-text {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #222531;
+}
+.order-btn {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  border: none;
+  border-style: none;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  background: #a6b0c3;
+  border-radius: 4px;
+  padding: 9px 13px 8px 42px;
+  background-image: url(../imgs/calendar-icon.svg);
+  background-repeat: no-repeat;
+  background-position-x: 8px;
+  background-position-y: center;
+}
+.books-for-user {
+  display: flex;
+}
+.user-bookmarks {
+  width: 268px;
+  height: auto;
+  padding: 25px;
+  background-color: #fff;
+}
+.bookmark-title {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+.bookmark-text {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155.6%;
+  color: #000000;
+  margin-bottom: 25px;
+}
+.bookmark-item {
+  width: 218px;
+  height: auto;
+  background: #f8fafd;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  padding: 15px 24px 15px 10px;
+}
+.book-name {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+.book-author {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  color: #757881;
+}
+.delete-btn,
+.read-btn {
+  width: 30px;
+  height: 26px;
+  border: none;
+  border-style: none;
+  background-color: #fff;
+}
+.delete-btn {
+  background-image: url(../imgs/delete-icon.svg);
+  background-repeat: no-repeat;
+}
+.read-btn {
+  display: inline-block;
+  background-image: url(../imgs/book-open-icon.svg);
+  background-repeat: no-repeat;
+}
+.books-to-read {
+  margin-left: 39px;
+}
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.books-info {
+  width: 282px;
+  height: auto;
+  padding: 31px 15px 13px 21px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-right: 33px;
+  margin-bottom: 33px;
+}
+.book-img {
+  width: 201px;
+  height: 202px;
+  margin: 0 auto 37px auto;
+}
+.book-title {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 2px;
+  color: #000000;
+}
+.book-author-name,
+.book-date {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  color: #757881;
+}
+.book-date {
+  margin-bottom: 5px;
+}
+.add-btn {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  border: none;
+  border-style: none;
+  margin-bottom: 5px;
+  color: #000000;
+  padding: 10px 26px;
+  background: #ffd80d;
+  border-radius: 4px;
+}
+.info-btn {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  border: none;
+  border-style: none;
+  background: rgba(13, 117, 255, 0.05);
+  border-radius: 4px;
+  color: #0d75ff;
+  padding: 10px 28px;
+  margin-bottom: 5px;
+}
+.readd-btn {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  border: none;
+  border-style: none;
+  background: #75828a;
+  border-radius: 4px;
+  color: #ffffff;
+  padding: 10px 106px;
+}
+.modal {
+  position: absolute;
+  transition: all 0.6s;
+  right: -1190px;
+  top: 0;
+  width: 553px;
+  background: #f8fafd;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+.modal-open {
+  transition: all 0.5s;
+  right: 0;
+  height: 100vh;
+}
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 31px;
+}
+.modal-title {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #222531;
+}
+.modal-remove {
+  border: none;
+  border-style: none;
+  background-image: url(../imgs/remove-icon.svg);
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+}
+.modal-info {
+  padding: 44px 35px 65px 46px;
+  background: #ffffff;
+}
+.modal-img {
+  margin: 0 auto 51px auto;
+  border-radius: 5px;
+}
+.modal-text {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 170.3%;
+  color: #58667e;
+  margin-bottom: 30px;
+}
+.author-name,
+.published-date,
+.publishers,
+.categorie,
+.page-count,
+.btn-to-read {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #222531;
+  margin-bottom: 21px;
+}
+/* .published-date {
+}
+.publishers {
+}
+.categorie {
+}
+.page-count {
+} */
+.btn-to-read {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  padding: 9px 39px;
+  border: none;
+  border-style: none;
+  background: #75828a;
+  border-radius: 4px;
+  margin-top: 14px;
+  margin-left: 407px;
+}
+.author-link,
+.date-link,
+.publisher-link,
+.categorie-link,
+.page-number {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 5px 20px;
+  color: #0d75ff;
+  background: rgba(13, 117, 255, 0.09);
+  border-radius: 30px;
+}
+/* 
+.date-link {
+}
+.publisher-link {
+}
+.categorie-link {
+}
+.page-number {
+} */

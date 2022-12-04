@@ -28,11 +28,11 @@ a {
 }
 body {
   margin: 0;
-  height: 100vh;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  // background: #fff;
+  background-image: url(../imgs/login-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  scroll-behavior: smooth;
 }
 .container {
   width: 100%;
