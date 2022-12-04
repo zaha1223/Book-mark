@@ -1,6 +1,6 @@
 const token = localStorage.getItem("token");
 if (!token) {
-  window.location.replace("../login.html");
+  window.location.replace("../index.html");
 }
 //=====================================
 const elLogOutBtn = document.querySelector(".logout-btn");
