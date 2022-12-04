@@ -12,12 +12,14 @@ function logOut() {
 let arrBook = [];
 function renderBooks(books) {
   for (let i of books) {
+    // console.log(i);
     arrBook.push({
       id: i.id,
       etag: i.etag,
       title: i.volumeInfo.title,
       author: i.volumeInfo.authors,
       date: i.volumeInfo.publishedDate,
+      link: i.volumeInfo.previewLink,
     });
     const elBookItem = document.createElement("li");
     const result = document.querySelector(".result-text");
@@ -125,6 +127,7 @@ function addBook(arr, item) {
           id: j.etag,
           title: j.title,
           author: j.author,
+          link: j.link,
         });
         localStorage.setItem("book", JSON.stringify(obj));
       }
@@ -133,6 +136,7 @@ function addBook(arr, item) {
         if (e.target.id == j.etag) {
           const elid = books.find((book) => book.id !== id);
           for (let m of books) {
+            console.log(m);
             if (!books.includes(elid) !== m.id) {
               const elMarkList = document.querySelector(".bookmark-list");
               const elBookMarkItem = document.createElement("li");
@@ -141,7 +145,7 @@ function addBook(arr, item) {
               elBookMarkItem.innerHTML = `
                   <h4 class="book-name">${m.title}</h4>
                           <p class="book-author">${m.author}</p>
-                          <a class="read-btn"></a>
+                          <a href="${m.link}" target="_blank" class="read-btn"></a>
                           <button  id="${m.id}" class="delete-btn"></button>`;
               if (books.includes(m.id) !== elBookMarkItem) {
                 elMarkList.prepend(elBookMarkItem);
